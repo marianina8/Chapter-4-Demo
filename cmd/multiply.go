@@ -29,9 +29,9 @@ var multiplyCmd = &cobra.Command{
 			fmt.Printf("unable to parse input[%s]: %v", args[0], err)
 			return
 		}
-		value = storage.GetValue(storageFile)
+		value = storage.GetValue()
 		value *= floatVal
-		storage.SetValue(storageFile, value)
+		storage.SetValue(value)
 		fmt.Printf("%f\n", value)
 	},
 }

@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	"github.com/spf13/viper"
 )
 
-func GetValue(filename string) float64 {
-	dat, err := os.ReadFile(filename)
+func GetValue() float64 {
+	dat, err := os.ReadFile(viper.GetString("filename"))
 	if err != nil {
 		fmt.Println("unable to read from storage")
 		return 0
@@ -19,8 +21,8 @@ func GetValue(filename string) float64 {
 	return floatVal
 }
 
-func SetValue(filename string, floatVal float64) error {
-	f, err := os.OpenFile(filename, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
+func SetValue(floatVal float64) error {
+	f, err := os.OpenFile(viper.GetString("filename"), os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 	if err != nil {
 		return err
 	}

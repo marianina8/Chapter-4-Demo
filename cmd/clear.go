@@ -19,7 +19,7 @@ var clearCmd = &cobra.Command{
 			fmt.Println("command does not accept args")
 			return
 		}
-		storage.SetValue(storageFile, 0)
+		storage.SetValue(0)
 		fmt.Println(0.0)
 	},
 }
