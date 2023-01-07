@@ -13,7 +13,7 @@ import (
 
 // divideCmd represents the divide command
 var divideCmd = &cobra.Command{
-	Use:   "divide",
+	Use:   "divide number",
 	Short: "Divide value",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) > 1 {

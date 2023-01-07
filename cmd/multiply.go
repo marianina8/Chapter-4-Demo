@@ -13,7 +13,7 @@ import (
 
 // multiplyCmd represents the multiply command
 var multiplyCmd = &cobra.Command{
-	Use:   "multiply",
+	Use:   "multiply number",
 	Short: "Multiply value",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) > 1 {

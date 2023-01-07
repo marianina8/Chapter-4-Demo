@@ -13,7 +13,7 @@ import (
 
 // addCmd represents the add command
 var addCmd = &cobra.Command{
-	Use:   "add",
+	Use:   "add number",
 	Short: "Add value",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) > 1 {

@@ -13,7 +13,7 @@ import (
 
 // subtractCmd represents the subtract command
 var subtractCmd = &cobra.Command{
-	Use:   "subtract",
+	Use:   "subtract number",
 	Short: "Subtract value",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) > 1 {
